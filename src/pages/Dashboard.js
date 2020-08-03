@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { FaUserCircle, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import {
-  FormControl,
-  InputGroup,
-  ListGroup,
   Row,
   Col,
   Card,
@@ -14,6 +11,7 @@ import {
 
 // Component
 import Navbar from '../component/NavbarApp';
+import Contact from '../component/ContactApp';
 
 export default class Dashboard extends Component {
   render() {
@@ -25,32 +23,7 @@ export default class Dashboard extends Component {
             <Row>
               {/* COL 3 CONTACT LIST */}
               <Col lg={3} className="border border-left-0 py-5">
-                {/* Form */}
-                <InputGroup className="mb-3">
-                  <InputGroup.Prepend>
-                    <InputGroup.Text id="basic-addon1">
-                      <FaSearch />
-                    </InputGroup.Text>
-                  </InputGroup.Prepend>
-                  <FormControl
-                    placeholder="search for cutomer"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
-                  />
-                </InputGroup>
-                {/* List */}
-                <ListGroup defaultActiveKey="#link1">
-                  <ListGroup.Item action href="#link1">
-                    <FaUserCircle />
-                    Jimmy Jones
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link2">
-                    Link 2
-                  </ListGroup.Item>
-                  <ListGroup.Item action>
-                    This one is a button
-                  </ListGroup.Item>
-                </ListGroup>
+                <Contact />
               </Col>
               {/* COL 3 CONTACT INFO */}
               <Col sm={3} className="border py-5">
