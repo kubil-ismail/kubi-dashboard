@@ -1,0 +1,25 @@
+// Active navbar
+.navbar-light .navbar-nav .nav-link.active {
+  color: $success !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $dark !important;
+  font-weight: 600;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link svg {
+  vertical-align: middle;
+  margin-bottom: 1px;
+  margin-right: 2px;
+}
+
+.nav-img {
+  margin-right: -10px !important;
+}
+
+.nav-volume {
+  color: $success;
+  margin-top: 10px;
+  font-size: 25px;
+}
