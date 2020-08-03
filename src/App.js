@@ -1,13 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// Pages
+import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+      </Switch>
+    </Router>
   );
 }
 
