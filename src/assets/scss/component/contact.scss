@@ -1,0 +1,25 @@
+.contact-list {
+  position: absolute;
+  height: 600px;
+  width: 95%;
+  overflow-y: scroll;
+  margin: 0px !important;
+  margin-top: -2% !important;
+}
+
+.search {
+  padding: 20px;
+  margin: 0;
+}
+
+.user-circle {
+  font-size: 50px;
+  color: $purle;
+  margin-right: 10px;
+}
+
+.list-group-item.active {
+  background-color: $grey !important;
+  border-color: $grey-2 !important;
+  color: $dark !important;
+}
