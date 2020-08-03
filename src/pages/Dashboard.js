@@ -1,69 +1,25 @@
 import React, { Component } from 'react';
+import { FaUserCircle, FaSearch } from 'react-icons/fa';
 import {
-  FaTachometerAlt,
-  FaTicketAlt,
-  FaHistory,
-  FaUserAlt,
-  FaVolumeUp,
-  FaUserCircle,
-  FaSearch,
-} from 'react-icons/fa';
-
-import {
-  Navbar,
-  Nav,
   FormControl,
   InputGroup,
   ListGroup,
-  Dropdown,
-  Image,
   Row,
   Col,
   Card,
   Tab,
   Button,
   Table
-} from 'react-bootstrap'
+} from 'react-bootstrap';
+
+// Component
+import Navbar from '../component/NavbarApp';
 
 export default class Dashboard extends Component {
   render() {
     return (
       <>
-        <Navbar bg="white" expand="lg" className="border-bottom">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home"><FaTachometerAlt /> Dashboard</Nav.Link>
-              <Nav.Link href="#link" className="mx-4"><FaTicketAlt /> Ticketing</Nav.Link>
-              <Nav.Link href="#link"><FaHistory /> Log CWC</Nav.Link>
-              <Nav.Link href="#link" className="mx-4"><FaUserAlt /> Customer</Nav.Link>
-            </Nav>
-            <Nav className="ml-auto">
-              <Image
-                src="https://avatars1.githubusercontent.com/u/49361887?s=48&v=4"
-                width="60"
-                height="60"
-                roundedCircle
-                className="nav-link"
-              />
-              <Dropdown className="nav-link">
-                <Dropdown.Toggle variant="transparent" id="dropdown-basic">
-                  Bilkis Ismail
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-              <Nav.Link>
-                <FaVolumeUp />
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-
+        <Navbar />
         <section id="content" className="px-4">
           <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
             <Row>
