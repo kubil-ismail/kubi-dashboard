@@ -9,7 +9,9 @@ export default function Contact(props) {
         <FaUserCircle className="user-circle" />
       </Col>
       <Col>
-        <h5 className="m-0 font-weight-bold">{props.name}</h5>
+        <h5 className="m-0">
+          <b>{props.name}</b>
+        </h5>
         <small>{props.phone}</small>
       </Col>
     </Row>

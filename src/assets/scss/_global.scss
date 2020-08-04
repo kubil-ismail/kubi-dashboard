@@ -1,5 +1,22 @@
-.text-muted {
-    color: #9da3a1;
+.text-muted, p, td {
+    color: #888888;
+}
+
+h1, h2, h3, h4, h5, b,
+.font-weight-bold {
+    color: $dark !important;
+}
+
+.font-weight-bold, b {
+    font-weight: 600 !important;
+}
+
+.bg-primary, .badge-primary {
+    background-color: $primary !important;
+}
+
+.btn-success {
+    background-color: $success !important;
 }
 
 /* make the customizations */

@@ -30,7 +30,9 @@ export default function Ticket(props) {
             </Col>
             <Col lg={4} className="text-right">
               <Badge variant="primary">{props.status}</Badge>
-              <p className="font-weight-bold m-0">{props.date}</p>
+              <p className="m-0">
+                <b>{props.date}</b>
+              </p>
               <small>{props.time}</small>
             </Col>
           </Row>

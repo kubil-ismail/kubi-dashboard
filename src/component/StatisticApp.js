@@ -91,7 +91,7 @@ export default function StatisticApp() {
           <Col lg={12} className="border-bottom pb-4">
             <h4>CWC Journey</h4>
             <Dropdown className="float-right">
-              <Dropdown.Toggle variant="success" id="dropdown-basic">
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
                 January
               </Dropdown.Toggle>
               <Dropdown.Menu>
