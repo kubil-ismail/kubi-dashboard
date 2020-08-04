@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FaPen } from 'react-icons/fa';
 import { Row, Col, Button } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 // Import: Redux
 import { connect } from 'react-redux';
@@ -9,28 +10,57 @@ import { fetchContact } from '../redux/actions/contactActions';
 // Component
 import Table from './detail/Customer';
 
-const info = {
-  address: 'Jl Rs Fatmawati',
-  company: 'Pt Infomedia Nusantara',
-  hp: '0808048304',
-  phone: '093049304934',
-  email: 'nasdkandkna@gmail.com',
-  facebook: 'Ismail',
-  twitter: 'sdsd',
-  telegram: 'sadasd',
-  instagram: 'smdsmdksd'
-};
-
 export class DetailApp extends Component {
   componentDidMount() {
     this.props.fetchContact();
   };
 
+  showAlert = () => {
+    Swal.fire({
+      title: 'Kirim Pesan',
+      input: 'textarea',
+      inputPlaceholder: 'Type your message here...',
+      inputAttributes: {
+        'aria-label': 'Type your message here'
+      },
+      showCancelButton: true
+    }).then((res) => {
+      if (res.isConfirmed) {
+        Swal.fire({
+          title: 'Pesan berhasil dikirim',
+          icon: 'success' 
+        })
+      }
+    })
+  }
+
+  showEdit = () => {
+    const { contact } = this.props.contact;
+    const { value: formValues } = Swal.fire({
+      title: 'Edit Customer',
+      html:
+        `<input id="swal-input1" class="swal2-input" value="${contact[0].name}" placeholder="Name" />` +
+        `<input id="swal-input2" class="swal2-input" value="${contact[0].email}" placeholder="Email" />` +
+        `<input id="swal-input5" class="swal2-input" value="${contact[0].phone}" placeholder="Phone Number" />` +
+        `<input id="swal-input4" class="swal2-input" value="${contact[0].company}" placeholder="Compant" />` +
+        `<input id="swal-input3" class="swal2-input" value="${contact[0].address}" placeholder="Address" />`
+    })
+
+    if (formValues) {
+      Swal.fire(JSON.stringify(formValues))
+    }
+  }
+
   render() {
     const { contact } = this.props.contact;
     return (
       <>
-        <FaPen className="float-right" color="#5aad82" />
+        {/* Edit User */}
+        <FaPen
+          className="float-right"
+          color="#5aad82"
+          onClick={() => this.showEdit()}
+        />
         <center>
           {contact.length >= 1 && (
             <h4 className="mb-4">{contact[0].name}</h4>
@@ -39,18 +69,23 @@ export class DetailApp extends Component {
             variant="success"
             size="sm"
             className="mr-3 px-4"
+            onClick={() => this.showAlert()}
           >
             Email
-        </Button>
+          </Button>
           <Button
             variant="success"
             size="sm"
             className="px-4"
+            onClick={() => this.showAlert()}
           >
             SMS
-        </Button>
+          </Button>
         </center>
-        <p className="mt-4">CUSTOMER INFO</p>
+        <p className="mt-4">
+          <b>CUSTOMER INFO</b>
+        </p>
+        {/* Table Data */}
         <Table data={contact[0]} />
         <Row className="text-center mt-4">
           <Col>
