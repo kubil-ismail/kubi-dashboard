@@ -1,14 +1,20 @@
 .contact-list {
   position: absolute;
-  height: 600px;
-  width: 95%;
+  height: 80%;
+  width: 91%;
   overflow-y: scroll;
   margin: 0px !important;
   margin-top: -2% !important;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.contact-list::-webkit-scrollbar {
+  display: none;
 }
 
 .search {
-  padding: 20px;
+  padding: 10px;
   margin: 0;
 }
 
@@ -22,4 +28,14 @@
   background-color: $grey !important;
   border-color: $grey-2 !important;
   color: $dark !important;
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: $success-2 !important;
+  border: none;
+}
+
+.table-hover tbody tr:hover {
+  background-color: $success-2 !important;
+  border: none;
 }

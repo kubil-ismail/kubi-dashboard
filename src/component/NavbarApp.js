@@ -84,5 +84,5 @@ export default function NavbarApp() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  )
+  );
 }
