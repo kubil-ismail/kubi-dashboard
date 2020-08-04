@@ -74,13 +74,13 @@ export default function ContactApp() {
       {/* Form */}
       <Search />
       {/* List */}
-      <ListGroup defaultActiveKey="#link1" className="m-0 contact-list">
+      <ListGroup className="m-0 contact-list">
         {contact.map((val, key) => (
-          <ListGroup.Item action href={val.url} key={key.toString()}>
+          <ListGroup.Item action key={key.toString()}>
             <Contact name={val.name} phone={val.phone} />
           </ListGroup.Item>
         ))}
       </ListGroup>
     </div>
-  )
+  );
 }
