@@ -1,10 +1,16 @@
 .contact-list {
   position: absolute;
   height: 80%;
-  width: 90%;
+  width: 91%;
   overflow-y: scroll;
   margin: 0px !important;
   margin-top: -2% !important;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.contact-list::-webkit-scrollbar {
+  display: none;
 }
 
 .search {

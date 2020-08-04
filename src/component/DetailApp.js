@@ -40,7 +40,7 @@ export default function DetailApp() {
             size="sm"
             className="px-4"
           >
-            Sms
+            SMS
           </Button>
         </center>
         <p className="mt-4">CUSTOMER INFO</p>

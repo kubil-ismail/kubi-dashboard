@@ -7,7 +7,7 @@ export default function Customer(props) {
     keys.push(key);
   }
   return (
-    <Table striped hover className="w-100">
+    <Table striped hover>
       <tbody>
         {keys.map((val, key) => (
           <tr key={key.toString()}>

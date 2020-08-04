@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { FaSearch, FaPen } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import {
   Row,
   Col,
   Card,
   Tab,
-  Button,
-  Table
+  Badge
 } from 'react-bootstrap';
 
 // Component
@@ -34,14 +33,28 @@ export default class Dashboard extends Component {
               <Col sm={6} className="border border-right-0 py-5">
                 <Tab.Content>
                   <Tab.Pane eventKey="#link1">
-                    <h4>CWC Journey</h4>
                     <h4>Tickets Journey</h4>
-                    <Card>
+                    <Card className="pb-0 card-statistic">
                       <Card.Body>
                         <Card.Text>
-                          <FaSearch />
-                          Some quick example text to build on the card title and make up the bulk
-                          of the card's content.
+                          <Row>
+                            <Col lg={1} className="d-flex align-items-center">
+                              <div>
+                                <FaUserCircle className="user-circle mb-2" />
+                              </div>
+                            </Col>
+                            <Col lg={7} className="pl-4 d-flex align-items-center">
+                              <div>
+                                <p className="m-0">123455 - Bilkis Ismail</p>
+                                <p className="font-weight-bold">Kartu Hilang</p>
+                              </div>
+                            </Col>
+                            <Col lg={4} className="text-right">
+                              <Badge variant="primary">On Progress</Badge>
+                              <p className="font-weight-bold m-0">30 Novermber 2020</p>
+                              <small>10:10:09</small>
+                            </Col>
+                          </Row>
                         </Card.Text>
                       </Card.Body>
                     </Card>
