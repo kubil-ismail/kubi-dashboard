@@ -35,15 +35,15 @@ export class DetailApp extends Component {
   }
 
   showEdit = () => {
-    const { contact } = this.props.contact;
+    const { detail } = this.props.contact;
     const { value: formValues } = Swal.fire({
       title: 'Edit Customer',
       html:
-        `<input id="swal-input1" class="swal2-input" value="${contact[0].name}" placeholder="Name" />` +
-        `<input id="swal-input2" class="swal2-input" value="${contact[0].email}" placeholder="Email" />` +
-        `<input id="swal-input5" class="swal2-input" value="${contact[0].phone}" placeholder="Phone Number" />` +
-        `<input id="swal-input4" class="swal2-input" value="${contact[0].company}" placeholder="Compant" />` +
-        `<input id="swal-input3" class="swal2-input" value="${contact[0].address}" placeholder="Address" />`
+        `<input id="swal-input1" class="swal2-input" value="${detail.name}" placeholder="Name" />` +
+        `<input id="swal-input2" class="swal2-input" value="${detail.email}" placeholder="Email" />` +
+        `<input id="swal-input5" class="swal2-input" value="${detail.phone}" placeholder="Phone Number" />` +
+        `<input id="swal-input4" class="swal2-input" value="${detail.company}" placeholder="Compant" />` +
+        `<input id="swal-input3" class="swal2-input" value="${detail.address}" placeholder="Address" />`
     })
 
     if (formValues) {
@@ -52,7 +52,7 @@ export class DetailApp extends Component {
   }
 
   render() {
-    const { contact } = this.props.contact;
+    const { detail } = this.props.contact;
     return (
       <>
         {/* Edit User */}
@@ -62,9 +62,7 @@ export class DetailApp extends Component {
           onClick={() => this.showEdit()}
         />
         <center>
-          {contact.length >= 1 && (
-            <h4 className="mb-4">{contact[0].name}</h4>
-          )}
+          <h4 className="mb-4">{detail.name}</h4>
           <Button
             variant="success"
             size="sm"
@@ -86,7 +84,7 @@ export class DetailApp extends Component {
           <b>CUSTOMER INFO</b>
         </p>
         {/* Table Data */}
-        <Table data={contact[0]} />
+        <Table data={detail} />
         <Row className="text-center mt-4">
           <Col>
             <h2 className="font-weight-bold">3</h2>

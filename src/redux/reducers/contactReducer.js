@@ -1,6 +1,7 @@
 const defaultState = {
   loading: true,
   contact: [],
+  detail: [],
   charts: [],
   ticket: [],
   index: null,
@@ -13,9 +14,17 @@ const reducer = (state = defaultState, action) => {
       const { payload } = action;
       return {
         ...state,
+        detail: payload.contact[0],
         contact: payload.contact,
         ticket: payload.ticket,
         charts: payload.data
+      }
+    }
+    case 'DETAIL_CONTACT': {
+      const { payload } = action;
+      return {
+        ...state,
+        detail: payload.contact,
       }
     }
     // DEFAULT

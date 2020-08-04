@@ -3,7 +3,7 @@ import { ListGroup } from 'react-bootstrap';
 
 // Import: Redux
 import { connect } from 'react-redux';
-import { fetchContact } from '../redux/actions/contactActions';
+import { fetchContact, detailContact } from '../redux/actions/contactActions';
 
 // Component
 import Contact from './contact/Contact';
@@ -13,6 +13,10 @@ export class ContactApp extends Component {
   componentDidMount() {
     this.props.fetchContact();
   };
+
+  detailContact = (key) => {
+    this.props.detailContact(key)
+  }
   
   render() {
     const { contact } = this.props.contact;
@@ -23,7 +27,11 @@ export class ContactApp extends Component {
         {/* List */}
         <ListGroup className="m-0 contact-list">
           {contact.length >= 1 && contact.map((val, key) => (
-            <ListGroup.Item action key={key.toString()}>
+            <ListGroup.Item
+              action
+              key={key.toString()}
+              onClick={() => this.detailContact(key)}
+            >
               <Contact name={val.name} phone={val.phone} />
             </ListGroup.Item>
           ))}
@@ -37,6 +45,6 @@ const mapStateToProps = (state) => ({
   contact: state.contact,
 });
 
-const mapDispatchToProps = { fetchContact };
+const mapDispatchToProps = { fetchContact, detailContact };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactApp);
