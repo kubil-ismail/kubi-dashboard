@@ -5,11 +5,17 @@ import {
   FaHistory,
   FaUserAlt,
   FaVolumeUp,
+  FaSun,
 } from 'react-icons/fa';
 import { Navbar, Nav, Dropdown, Image } from 'react-bootstrap';
 
 export default function NavbarApp() {
   const menu = [
+    {
+      url: '#home',
+      name: 'Infomedia',
+      icon: <FaSun className="mr-2" />
+    },
     { 
       url: '#home',
       name: 'Dashboard',
@@ -41,8 +47,7 @@ export default function NavbarApp() {
   ]
   return (
     <Navbar bg="white" expand="lg" className="border-bottom">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Brand className="d-lg-none">Kubi Dashboard</Navbar.Brand>
+      <Navbar.Brand className="d-lg-none">Infomedia</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="text-center">
         <Nav className="mr-auto">
