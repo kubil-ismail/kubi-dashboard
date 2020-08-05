@@ -15,11 +15,11 @@ export default class Dashboard extends Component {
         <section id="content" className="px-4">
         <Row>
           {/* COL 3 CONTACT LIST */}
-          <Col lg={3} className="border border-left-0 py-5">
+          <Col lg={3} className="border border-left-0 py-lg-5">
             <Contact />
           </Col>
           {/* COL 3 CONTACT INFO */}
-          <Col sm={3} className="border py-5">
+          <Col sm={3} className="border py-lg-5">
             <Detail />
           </Col>
           {/* COL 6 CONTACT DETAIL */}

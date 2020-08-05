@@ -22,7 +22,7 @@ const reducer = (state = defaultState, action) => {
     }
     case 'SEARCH_CONTACT': {
       const { request, contact } = action.payload;
-      const data = state.contact.filter((val) => val.name === request)
+      const data = state.contact.filter((val) => val.name.toLowerCase() === request.toLowerCase())
       if (data.length >= 1) {
         return {
           ...state, contact: data
