@@ -10,9 +10,9 @@ export default function Contact(props) {
       </Col>
       <Col>
         <h5 className="m-0">
-          <b>{props.name}</b>
+          <b className="text-truncate">{props.name}</b>
         </h5>
-        <small>{props.phone}</small>
+        <small className="text-truncate">{props.phone}</small>
       </Col>
     </Row>
   );

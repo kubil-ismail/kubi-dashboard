@@ -9,6 +9,15 @@
   scrollbar-width: none;  /* Firefox */
 }
 
+@media only screen and (max-width: 600px) {
+.contact-list {
+  position: relative;
+  height: 80%;
+  width: 100%;
+}
+
+}
+
 .contact-list::-webkit-scrollbar {
   display: none;
 }
