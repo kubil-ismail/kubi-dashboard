@@ -21,9 +21,7 @@ export default function Ticket(props) {
             <Col lg={7} className="pl-4 d-flex align-items-center">
               <div>
                 <p className="m-0">
-                  <span>{props.id}</span>
-                  <span> - </span>
-                  <span>{props.name}</span>
+                  {props.id} - {props.name}
                 </p>
                 <p className="font-weight-bold">{props.desc}</p>
               </div>

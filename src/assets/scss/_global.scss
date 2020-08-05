@@ -18,6 +18,31 @@ h1, h2, h3, h4, h5, b,
 .btn-success {
     background-color: $success !important;
 }
+.wrapper {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.sideNav nav {
+    width: 100%;
+    background-color: $success;
+}
+
+.sideNav .logo {
+    // padding: 10px;
+    padding: 20px 0px;
+    background-color: red;
+    width: 100%;
+}
+
+.content {
+    width: 140% !important;
+    margin-left: -5%;
+}
+
+.sideNav svg {
+    font-size: 30px;
+    margin-left: 10px;
+}
 
 /* make the customizations */
 $theme-colors: (

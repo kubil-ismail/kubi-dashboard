@@ -14,6 +14,7 @@ import {
 export default function Chart(props) {
   return (
     <LineChart
+      className="chart"
       width={610}
       height={420}
       data={props.data}

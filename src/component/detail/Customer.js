@@ -7,7 +7,7 @@ export default function Customer(props) {
     keys.push(key);
   }
   return (
-    <Table striped responsive="sm">
+    <Table striped responsive className="w-100">
       <tbody>
         {keys.map((val, key) => (
           <tr key={key.toString()}>
