@@ -20,6 +20,19 @@ const reducer = (state = defaultState, action) => {
         charts: payload.data
       }
     }
+    case 'SEARCH_CONTACT': {
+      const { request, contact } = action.payload;
+      const data = state.contact.filter((val) => val.name === request)
+      if (data.length >= 1) {
+        return {
+          ...state, contact: data
+        }
+      } else {
+        return {
+          ...state, contact
+        }
+      }
+    }
     case 'DETAIL_CONTACT': {
       const { payload } = action;
       return {

@@ -129,6 +129,71 @@ const contact = [
     telegram: "-",
     instagram: "-"
   },
+  {
+    id: "16810227 3201",
+    name: "Oliver",
+    address: "07624 509891",
+    company: "62 21 752 4415",
+    hp: "P.O. Box 933, 4658 Aliquet Rd.",
+    phone: "convallis.dolor.Quisque@Maurisquisturpis.net",
+    email: "Non Arcu Foundation",
+    facebook: "-",
+    twitter: "-",
+    telegram: "-",
+    instagram: "-"
+  },
+  {
+    id: "16630527 6997",
+    name: "Meredith",
+    address: "070 1318 3563",
+    company: "62 73 123 8448",
+    hp: "P.O. Box 924, 9795 Blandit Av.",
+    phone: "penatibus.et@urnaVivamusmolestie.org",
+    email: "Ipsum Phasellus Inc.",
+    facebook: "-",
+    twitter: "-",
+    telegram: "-",
+    instagram: "-"
+  },
+  {
+    id: "16790615 8949",
+    name: "Charles",
+    address: "055 0264 0883",
+    company: "62 62 491 0020",
+    hp: "7549 Donec St.",
+    phone: "eros@Morbi.ca",
+    email: "Egestas Consulting",
+    facebook: "-",
+    twitter: "-",
+    telegram: "-",
+    instagram: "-"
+  },
+  {
+    id: "16510418 4568",
+    name: "Colette",
+    address: "(01712) 968555",
+    company: "62 19 171 0418",
+    hp: "Ap #605-1066 Quam, Rd.",
+    phone: "Quisque.porttitor.eros@dolor.edu",
+    email: "Eu Dolor Corporation",
+    facebook: "-",
+    twitter: "-",
+    telegram: "-",
+    instagram: "-"
+  },
+  {
+    id: "16950323 4453",
+    name: "John",
+    address: "0500 393941",
+    company: "62 15 195 8787",
+    hp: "Ap #292-8015 Et Av.",
+    phone: "Nam.nulla@ultricesVivamusrhoncus.co.uk",
+    email: "Ante Dictum Mi Associates",
+    facebook: "-",
+    twitter: "-",
+    telegram: "-",
+    instagram: "-"
+  },
 ];
 
 const ticket = [
@@ -204,5 +269,12 @@ export const detailContact = (request) => {
   return {
     type: 'DETAIL_CONTACT',
     payload: { contact: contact[request] },
+  };
+}
+
+export const searchContact = (request) => {
+  return {
+    type: 'SEARCH_CONTACT',
+    payload: { request, contact },
   };
 }
